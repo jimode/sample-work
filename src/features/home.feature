@@ -5,4 +5,18 @@ I want to be able to view the home page
 
   Scenario: View the homepage
     Given I visit the YLD hom page
-# Then I should see the "What we do" section
+    Then I should see the "What we do" section
+    And I should see the "Customers" titled section
+
+  Scenario Outline: View and use the menu
+    Then Link <link> should dispay the <pageUrl> page
+
+    Examples:
+      | link | pageUrl         |
+      | 0    | www.yld.io/     |
+      | 1    | what-we-do.html |
+      | 2    | our-work.html   |
+      | 3    | resources.html  |
+      | 4    | about.html      |
+      | 5    | newsroom.html   |
+      | 6    | contact.html    |
