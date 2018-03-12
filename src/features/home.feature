@@ -3,8 +3,10 @@ Feature: See the home page
 As a User
 I want to be able to view the home page
 
+  Background: Visit the homepage
+    Given I visit the YLD home page
+
   Scenario: View the homepage
-    Given I visit the YLD hom page
     Then I should see the "What we do" section
     And I should see the "Customers" titled section
 
@@ -20,3 +22,7 @@ I want to be able to view the home page
       | 4    | about.html      |
       | 5    | newsroom.html   |
       | 6    | contact.html    |
+
+  Scenario: Subscribe to the YLD Newsletter
+    And I navigate to the blog page
+    When I subscribe to the newsletter
