@@ -6,12 +6,8 @@
 import Page from './page';
 
 class BlogPage extends Page {
-    // get emailTextField() {
-    //     return browser.element('.hs_email .input');
-    // }
-
-    get emailTextField() {
-        return browser.element('input[type="email"]');
+    get emailTextFields() {
+        return browser.$$('input[type="email"]');
     }
 
     get submitNewsLetter() {
@@ -19,11 +15,15 @@ class BlogPage extends Page {
     }
 
     get successMessage() {
-        return browser.element('');
+        return browser.element('.hbspt-form');
+    }
+
+    get searchField() {
+        return browser.element("input[name='search-keyword-widget']");
     }
 
     getBrowserUrl() {
-        return browser.getUrl('.newsletter');
+        return browser.getUrl();
     }
 }
 

@@ -3,7 +3,6 @@
 
 import { defineSupportCode } from 'cucumber';
 import HomePage from '../pages/home-page';
-import BlogPage from '../pages/blog-page';
 
 defineSupportCode(({ Given, When, Then }) => {
     Given(/^I visit the YLD home page$/, () => {
@@ -27,21 +26,5 @@ defineSupportCode(({ Given, When, Then }) => {
         HomePage.menuLinks[link].click();
         expect(browser.getUrl().endsWith(pageUrl)).to.eq(true);
         expect(HomePage.menuLinks.length).to.eq(8);
-    });
-
-    Given('I navigate to the blog page', () => {
-        HomePage.menuLinks[7].click();
-    });
-
-    When('I subscribe to the newsletter', () => {
-        BlogPage.emailTextField.click();
-        BlogPage.emailTextField.setValue('jimode@yahoo.com');
-        BlogPage.submitNewsLetter();
-        browser.debug();
-    });
-
-    Then('the success message should be displayed', () => {
-        expect(BlogPage.successMessage.isVisible()).to.be.true;
-        expect(BlogPage.successMessage.getText()).to.include('Thank you for subscribing to our blog');
     });
 });

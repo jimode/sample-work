@@ -156,7 +156,10 @@ exports.config = {
         // <string[]> (name) specify the profile to use
         profile: [],
         // <string[]> (file/dir) require files before executing features
-        require: ['./src/features/steps/home-steps.js'],
+        require: [
+            './src/features/steps/home-steps.js',
+            './src/features/steps/blog-steps.js',
+        ],
         // <string> specify a custom snippet syntax
         snippetSyntax: undefined,
         // <boolean> fail if there are any undefined or pending steps
