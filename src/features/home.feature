@@ -22,3 +22,6 @@ I want to be able to view the home page
       | 4    | about.html      |
       | 5    | newsroom.html   |
       | 6    | contact.html    |
+
+# Scenario: Subscribe to the newsletter from home the page
+#   When I subscribe

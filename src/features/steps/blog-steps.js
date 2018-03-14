@@ -15,10 +15,10 @@ defineSupportCode(({ Given, When, Then }) => {
         try {
             browser.scroll(x, y);
         } catch (error) {
-            console.error(error);
+            // console.error(error);
         }
         BlogPage.emailTextFields[0].click();
-        BlogPage.emailTextFields[0].keys('dame@yahoo.com');
+        BlogPage.emailTextFields[0].keys('janet@yahoo.com');
         BlogPage.submitNewsLetter.click();
     });
 

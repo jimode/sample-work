@@ -27,4 +27,10 @@ defineSupportCode(({ Given, When, Then }) => {
         expect(browser.getUrl().endsWith(pageUrl)).to.eq(true);
         expect(HomePage.menuLinks.length).to.eq(8);
     });
+
+    When('I subscribe', () => {
+        HomePage.emailTextField.click();
+        HomePage.emailTextField.keys('james1@yahoo.com');
+        HomePage.submit.click();
+    });
 });

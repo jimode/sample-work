@@ -29,6 +29,14 @@ class HomePage extends Page {
     get menuLinks() {
         return browser.$$('.mdl-navigation__link');
     }
+
+    get emailTextField() {
+        return browser.element('input[type="email"]');
+    }
+
+    get submit() {
+        return browser.element('input[type="submit"]');
+    }
 }
 
 export default new HomePage();
